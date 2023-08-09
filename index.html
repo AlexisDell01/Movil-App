@@ -1,0 +1,70 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Clasificación de Imágenes</title>
+  </head>
+  <body>
+    <h1>Clasificación de Imágenes</h1>
+    <form id="imageForm">
+      <!-- Agregar un input de tipo "file" para seleccionar una imagen de la galería -->
+      <input type="file" id="imagenInput" accept="image/*" />
+      <!-- Agregar un elemento "img" para mostrar el preview de la imagen -->
+      <img
+        id="previewImagen"
+        style="display: none; max-width: 300px"
+        alt="Preview"
+      />
+      <button type="submit">Enviar</button>
+    </form>
+
+    <div id="resultado"></div>
+
+    <script>
+      // Manejador de eventos para el input de imagen
+      document
+        .getElementById("imagenInput")
+        .addEventListener("change", (event) => {
+          const imagen = event.target.files[0]; // Obtener la imagen seleccionada
+
+          // Verificar que se seleccionó una imagen
+          if (imagen) {
+            // Mostrar el preview de la imagen
+            const previewImagen = document.getElementById("previewImagen");
+            previewImagen.src = URL.createObjectURL(imagen);
+            previewImagen.style.display = "block";
+          }
+        });
+
+      // Manejador de eventos para el formulario
+      document
+        .getElementById("imageForm")
+        .addEventListener("submit", (event) => {
+          event.preventDefault(); // Prevenir el envío del formulario
+
+          // Obtener el nombre de la imagen
+          const nombreImagen =
+            document.getElementById("imagenInput").files[0].name;
+
+          // Realizar la solicitud HTTP POST a la API de Express
+          fetch("http://localhost:3000/classify_image", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ nombre_imagen: nombreImagen }),
+          })
+            .then((response) => response.json())
+            .then((data) => {
+              // Mostrar el resultado en el elemento con el id "resultado"
+              document.getElementById("resultado").innerText = data.es_agave
+                ? "La imagen es un agave."
+                : "La imagen no es un agave.";
+            })
+            .catch((error) => {
+              console.error("Error al enviar la solicitud:", error);
+            });
+        });
+    </script>
+  </body>
+</html>
