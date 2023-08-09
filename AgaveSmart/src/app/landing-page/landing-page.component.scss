@@ -1,0 +1,117 @@
+/* Global styles */
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column; display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 16px; /* Tamaño de fuente base para el diseño responsive */
+  background: linear-gradient(180deg, #FFF 0%, rgba(231, 244, 217, 0.56) 43.54%, rgba(136, 190, 82, 0.00) 100%);
+}
+
+/* Styles for the splash screen container */
+.splash-screen-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+/* Styles for the progress phrase */
+.progress-phrase {
+  font-size: 2.5vw; /* Utilizando unidades relativas (vw) para el tamaño de fuente */
+  text-align: center;
+  margin-top: 1.5vh; /* Utilizando unidades relativas (vh) para el margen superior */
+  padding-top: 1vh; /* Utilizando unidades relativas (vh) para el espaciado superior */
+  padding-bottom: 1vh; /* Utilizando unidades relativas (vh) para el espaciado inferior */
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Styles for the percentage progress */
+.porcentaje-progress {
+  font-size: 2.5vw; /* Utilizando unidades relativas (vw) para el tamaño de fuente */
+  text-align: center;
+  padding-top: 1vh; /* Utilizando unidades relativas (vh) para el espaciado superior */
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Styles for the progress title */
+.progress-title {
+  font-size: 5vw; /* Utilizando unidades relativas (vw) para el tamaño de fuente */
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Styles for the material design progress bar */
+mat-progress-bar {
+  height: 1vh; /* Utilizando unidades relativas (vh) para la altura de la barra de progreso */
+  width: 75%; /* Utilizando unidades relativas (%) para el ancho de la barra de progreso */
+  padding-bottom: 1px;
+}
+
+/* Styles for the loading image */
+.loading-image {
+  width: 15vw; /* Utilizando unidades relativas (vw) para el tamaño de la imagen */
+  height: 15vw; /* Utilizando unidades relativas (vw) para el tamaño de la imagen */
+  animation: pulse-animation 2s infinite;
+  padding-bottom: 1vh; /* Utilizando unidades relativas (vh) para el espaciado inferior */
+  position: absolute;
+  top: 30%; /* Utilizando unidades relativas (vh) para la posición vertical */
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+}
+
+/* Pulse animation keyframes */
+@keyframes pulse-animation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Media query for smaller screens (e.g., mobile devices) */
+@media screen and (max-width: 767px) {
+  .progress-phrase {
+    font-size: 3.5vw; /* Tamaño de fuente ajustado para pantallas más pequeñas */
+    padding-top: 2vh; /* Espaciado superior ajustado para pantallas más pequeñas */
+    padding-bottom: 2vh; /* Espaciado inferior ajustado para pantallas más pequeñas */
+  }
+
+  .porcentaje-progress {
+    font-size: 3.5vw; /* Tamaño de fuente ajustado para pantallas más pequeñas */
+    padding-top: 2vh; /* Espaciado superior ajustado para pantallas más pequeñas */
+  }
+
+  .loading-image {
+    width: 25vw; /* Tamaño de imagen ajustado para pantallas más pequeñas */
+    height: 25vw; /* Tamaño de imagen ajustado para pantallas más pequeñas */
+    top: 20%; /* Posición vertical ajustada para pantallas más pequeñas */
+  }
+}
+
+/* Media query for tablets (e.g., iPad, Android tablets, etc.) */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .progress-phrase {
+    font-size: 2rem; /* Tamaño de fuente ajustado para tablets */
+    padding-top: 1.5rem; /* Espaciado superior ajustado para tablets */
+    padding-bottom: 1.5rem; /* Espaciado inferior ajustado para tablets */
+  }
+
+  .porcentaje-progress {
+    font-size: 2rem; /* Tamaño de fuente ajustado para tablets */
+    padding-top: 1rem; /* Espaciado superior ajustado para tablets */
+  }
+
+  .loading-image {
+    width: 15vh; /* Tamaño de imagen ajustado para tablets */
+    height: 15vh; /* Tamaño de imagen ajustado para tablets */
+    top: 25%; /* Posición vertical ajustada para tablets */
+  }
+}

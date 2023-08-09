@@ -1,0 +1,169 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: "Noto Sans", sans-serif;
+  background: linear-gradient(
+    180deg,
+    #fff 0%,
+    rgba(231, 244, 217, 0.56) 43.54%,
+    rgba(136, 190, 82, 0) 100%
+  );
+}
+
+/* Estilos para la sección de título */
+.title-container {
+  margin-top: 10vh;
+  margin-bottom: -20px;
+  text-align: center;
+  flex-shrink: 0;
+
+  .image {
+    width: 8.375rem;
+    height: 2.0625rem;
+    flex-shrink: 0;
+  }
+
+  .title {
+    color: #1e1e1e;
+    font-family: Noto Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px; /* 200% */
+  }
+
+  .note {
+    color: #909090;
+    font-family: Noto Sans;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px; /* 320% */
+  }
+}
+
+/* Estilos para los botones y texto en la sección de acción */
+.Action-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+
+  .next {
+    width: 238px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 3px;
+    background: #89c053;
+    box-shadow: 0px 4px 10px 0px rgba(154, 205, 104, 0.5);
+    color: #fff;
+    font-family: Noto Sans;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5rem; /* 150% */
+    margin-top: 40px;
+  }
+
+  .texto {
+    color: #727272;
+    font-family: Noto Sans;
+    font-size: 0.8125rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2rem; /* 246.154% */
+    margin-top: 25px;
+  }
+
+  .return {
+    width: 9.25rem;
+    height: 2.75rem;
+    justify-content: center;
+    align-self: center;
+    flex-shrink: 0;
+    border-radius: 0.1875rem;
+    border: 1px solid #909090;
+    background: #fff;
+    color: #909090;
+    font-family: Noto Sans;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5rem; /* 150% */
+    margin-top: 2px;
+  }
+}
+
+/* Estilos para las imágenes de la parte inferior */
+.bottom-images-container {
+  display: flex;
+  justify-content: space-between;
+  //align-items: flex-end;
+  flex-shrink: 0;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: index -1;
+
+  /* Estilos para las imágenes en las esquinas inferiores */
+  .img-left,
+  .img-right {
+    width: 40rem; /* Ajusta el tamaño de las imágenes según sea necesario */
+    height: 40rem; /* Ajusta el tamaño de las imágenes según sea necesario */
+  }
+
+  /* Estilo para la imagen izquierda en la esquina inferior izquierda */
+  .img-left img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* Estilo para la imagen derecha en la esquina inferior derecha */
+  .img-right img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+/* Media query para pantallas más pequeñas (ejemplo: menos de 767px) */
+@media screen and (max-width: 767px) {
+  /* Estilos para la sección de título en pantallas más pequeñas */
+  .title-container {
+    margin-top: 5vh;
+
+    .title {
+      font-size: 24px;
+      line-height: 1.5;
+    }
+
+    .note {
+      font-size: 12px;
+      line-height: 1.5;
+    }
+    .image {
+      width: 14.375rem;
+      height: 8.5625rem;
+      flex-shrink: 0;
+    }
+  }
+
+  /* Estilos para los botones y texto en la sección de acción en pantallas más pequeñas */
+  .Action-button {
+    margin-top: 10px;
+
+    .next,
+    .return {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+<body>
+  <header>
+    <div class="back-arrow"></div>
+    <div class="title">Imagen no identificada</div>
+  </header>
+
+  <div class="content">
+    <div class="div-image-grande">
+      <img
+        [src]="selectedFileBase64"
+        alt="Imagen Grande"
+        class="full-width-img"
+      />
+      <!-- Usamos la propiedad selectedFileURL para mostrar la imagen -->
+    </div>
+
+    <div class="line"></div>
+
+    <div class="additional-data">
+      <p class="texto1">Datos adicionales:</p>
+      <p class="texto2">
+        Lo sentimos, la imagen que proporcionó no pudo ser identificada como
+        agave.
+      </p>
+    </div>
+
+    <button class="continue-button" (click)="regresar()">Continuar</button>
+  </div>
+</body>

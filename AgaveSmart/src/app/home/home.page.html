@@ -1,0 +1,18 @@
+<!-- app.component.html -->
+<body>
+  <div class="title-container">
+    <h1 class="title">Toque para identificar</h1>
+  </div>
+  <div class="image-container">
+    <div><img src="..\assets\images\camera.png" alt=""></div>
+    <hr>
+    <div class="img2" (click)="fileInput.click()"><img src="..\assets\images\files.png" alt=""></div>
+    <input #fileInput type="file" (change)="onFileSelected($event)" accept="image/*" style="display: none;">
+  </div>
+  <div class="bottom-images-container">
+    <div class="img-left"><img src="..\assets\images\wood.png" alt=""></div>
+    <div class="mid"></div>
+    <div class="img-right"><img src="..\assets\images\wood2.png" alt=""></div>
+  </div>
+</body>
+

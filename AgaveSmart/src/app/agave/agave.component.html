@@ -1,0 +1,40 @@
+<header>
+  <div class="back-arrow" (click)="return()"></div>
+  <div class="title">Identificación - Resultados</div>
+</header>
+
+<div class="content">
+  <div class="div-image-grande">
+    <!-- Mostrar la imagen procesada del servidor -->
+    <img
+      [src]="selectedFileBase64"
+      alt="Imagen procesada del servidor"
+      class="full-width-img"
+    />
+    <img src="..\assets\images\correcto.png" class="imagen2" alt="Imagen 2" />
+  </div>
+  <div class="label">
+    Etiqueta:
+    <button disabled>
+      Agave
+      <img src="..\assets\images\icono_pequeño.png" alt="Icono Etiqueta" />
+    </button>
+  </div>
+
+  <div class="line"></div>
+
+  <div class="additional-data">
+    <p class="texto1">Datos adicionales:</p>
+    <p class="texto2">La foto que proporcionó, fue identificada como agave</p>
+    <div>
+      <!-- Mostrar la imagen procesada del servidor -->
+      <img
+        [src]="processedImageSrc"
+        alt="Imagen procesada del servidor"
+        class="adittional-img"
+      />
+    </div>
+  </div>
+
+  <button class="continue-button" (click)="return()">Continuar</button>
+</div>

@@ -1,0 +1,212 @@
+/* Estilos generales */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(
+    180deg,
+    #fff 0%,
+    rgba(231, 244, 217, 0.56) 43.54%,
+    rgba(136, 190, 82, 0) 100%
+  );
+}
+
+header {
+  display: flex;
+  align-items: center;
+  background-color: #f0f0f0;
+  padding: 10px;
+}
+
+.back-arrow {
+  width: 40px;
+  height: 20px;
+  margin-right: 10px;
+  background-image: url("../../assets/images/flecha.png");
+  background-size: cover;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.content {
+  width: 100%;
+}
+
+.full-width-img {
+  width: 100%;
+  height: auto;
+}
+
+.div-image-grande {
+  position: relative;
+  width: 100%;
+  max-width: 100vw;
+}
+
+.imagen2 {
+  position: absolute;
+  bottom: 1rem;
+  left: 0;
+  width: 3rem;
+  /* Ajusta el tamaño de la segunda imagen según lo que necesites */
+  height: auto;
+}
+
+.label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.label img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.label button {
+  background-color: #ffff;
+  color: #9acd68;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px;
+  border: 1px solid #6e6e6e;
+  border-radius: 50px;
+  padding: 4px 25px;
+  cursor: not-allowed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.line {
+  border-bottom: 1px solid #ccc;
+  margin: 20px 0;
+}
+
+.additional-data {
+  text-align: justify;
+  margin-top: 20px;
+  padding: 0 2rem;
+}
+
+.texto1 {
+  color: #1e1e1e;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px;
+}
+
+.additional-img {
+  display: block;
+  margin: 0 auto;
+  margin-top: 2rem;
+  width: 50%;
+  height: auto;
+  border: 2px solid #89c053;
+}
+
+.continue-button {
+  display: block;
+  margin: 30px auto;
+  background-color: #fff;
+  color: #909090;
+  border: 1px solid #6e6e6e;
+  border-radius: 50px;
+  padding: 10px 25px;
+  cursor: pointer;
+  bottom: 10vh;
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 767px) {
+  header {
+    padding: 5px;
+  }
+
+  .back-arrow {
+    width: 30px;
+    height: 15px;
+    margin-right: 5px;
+  }
+
+  .title {
+    font-size: 18px;
+  }
+
+  .label img {
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;
+  }
+
+  .label button {
+    font-size: 16px;
+    line-height: 28px;
+  }
+
+  .additional-img {
+    width: 80%;
+  }
+
+  .continue-button {
+    margin: 20px auto;
+    padding: 8px 20px;
+    font-size: 16px;
+    bottom: 5vh;
+  }
+}
+
+/* Estilos para tablets */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .back-arrow {
+    width: 35px;
+    height: 18px;
+    margin-right: 8px;
+  }
+
+  .title {
+    font-size: 19px;
+  }
+
+  .label button {
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+  .additional-img {
+    width: 60%;
+  }
+
+  .continue-button {
+    font-size: 18px;
+  }
+}
+
+/* Estilos para computadoras */
+@media (min-width: 1024px) {
+  .back-arrow {
+    width: 40px;
+    height: 20px;
+    margin-right: 10px;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+
+  .label button {
+    font-size: 18px;
+    line-height: 32px;
+  }
+
+  .additional-img {
+    width: 50%;
+  }
+}
